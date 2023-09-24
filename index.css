@@ -1,5 +1,7 @@
 :root {
     --background:#808000;
+    --background1: #cb96d2 ;
+    --background-card1: #a7bc66;
 }
 * {
     margin: 0;
@@ -48,4 +50,45 @@
     cursor: pointer;
     border-radius: 8px;
     box-shadow: 10px 10px 5px lightblue;
+}
+.background1 {
+    background-color: var(--background1);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+.gallery1 {
+    display: flex;
+    left: calc(50% - 330px);
+}
+.card1 {
+    position: relative;
+    left: 0px;
+    width: 25%;
+    height: 150px;
+    background-color: var(--background-card1);
+    border-radius: 8px;
+    transition: 1s ease-in-out;
+    overflow: hidden;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
+}
+.card1:not(:first-child) {
+    margin-left: -40px;
+}
+.card1:hover {
+    transform: translateY(-100px);
+    font-weight: bold;
+    border: 2px solid saddlebrown;
+    border-radius: 50%;
+    outline: 2px solid slateblue;
+    outline-offset: 5px;
+    cursor: pointer;
+}
+.card1:hover ~ .card1 {
+    left: 55px;
+}
+.card1 img {
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
 }
